@@ -1,0 +1,26 @@
+<div class="panel">
+  <div class="header center">
+    <ul>
+      <li style="float: left;"> <p><a [routerLink]="['']">Cryptocurrency Tracker</a></p> 
+    </ul>
+  </div>
+  <div class="menubar text-center">
+    <marquee scrolldelay="50">
+      <p>   Cryptocurrencies : <a class="space" href="#">{{ active_cryptocurrencies}} </a> 
+        Markets : <a class="space" href="#">{{ active_markets }}</a> 
+        Market Cap : <a class="space" href="#">{{ total_market_cap | currency }}</a> 
+        24h Vol : <a class="space" href="#">{{ total_volume_24h | currency}}</a>         
+        BTC Dominance : <a class="space" href="#">{{ bitcoin_percentage_of_market_cap/100 | percent }}</a> </p>
+    </marquee>
+  </div>
+  
+  <router-outlet></router-outlet>
+
+  <div class=""><br><br></div>
+  <div class="footer">
+    <div class="inner">
+      <p class="left">SOURABH KUMAR SINHA</p>    
+      <p class="right">Contact : srv.sourabh@gmail.com</p>
+    </div>
+  </div>
+</div>

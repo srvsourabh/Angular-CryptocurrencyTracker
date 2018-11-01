@@ -1,0 +1,36 @@
+h1 {
+    color: rgb(80, 79, 79);
+    font-size: xx-large;
+    margin-bottom: 20px;
+}
+
+p{
+    margin-top: 25px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.column {
+    float: left;
+    width: 33.33%;
+    padding: 20px;
+    font-size: larger;
+}
+
+.center{
+    text-align: center;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.loadspin{
+    font-size:50px;
+    color:yellowgreen;
+    margin-top: 20%;
+}

@@ -1,0 +1,32 @@
+<div class="jumbotron" *ngIf="name">
+  <h1>{{ name }} <span>({{ symbol }})</span></h1>  
+  <h5 *ngIf ="price">Price : {{ price | currency }}</h5> 
+
+  <div class="row">
+    <div class="col-sm-4" *ngIf ="rank">
+        <p>Rank : {{ rank }}</p> 
+    </div>
+    <div class="col-sm-4"  *ngIf ="total_supply">
+        <p>Total Supply : {{ total_supply }} {{ symbol }}</p>  
+    </div>
+    <div class="col-sm-4" *ngIf ="volume_24h">
+        <p>Volume 24h : {{ volume_24h | currency }}</p>
+    </div>
+  </div>  
+
+  <div class="row" *ngIf ="circulating_supply">
+    <div class="col-sm-4">
+        <p>Circulating Supply : {{ circulating_supply }} {{ symbol }}</p>
+    </div>
+    <div class="col-sm-4" *ngIf ="max_supply">
+        <p>Max supply : {{ max_supply }} {{ symbol }}</p>    
+    </div>
+    <div class="col-sm-4" *ngIf ="market_cap">
+        <p>Market Cap : {{ market_cap | currency  }}</p>
+    </div>
+  </div>      
+</div>
+<div *ngIf="!name" class='center'>
+    <i class="fa fa-spinner fa-spin loadspin" ></i>
+</div>
+  

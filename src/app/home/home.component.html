@@ -1,0 +1,19 @@
+<div class="shift">
+    <input type="text" id="mySearch" placeholder="Search..."(change)="filterList(filterTemp.value)" #filterTemp >
+</div>
+
+<div class="shift" *ngIf="gridData">
+  <div class="center">
+    <div class="gallery center" *ngFor="let data of gridData">        
+      <div class="desc" ><p class="dot">{{ data.id }}</p></div>
+      <div class="desc">Name : {{ data.name }}</div>            
+      <div class="desc">Symbol : {{ data.symbol }}</div>  
+      <div class="desc" style="align-items: center;">
+        <button type="submit" (click)="fetch(data.id)" class="btn btn-info">View in Detail</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div *ngIf="!gridData" class="spin">
+    <i class="fa fa-spinner fa-spin loadspin" ></i>
+</div>
